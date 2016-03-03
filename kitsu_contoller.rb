@@ -14,6 +14,8 @@ end
 
 
 post '/kitsu' do
-  return "#{params}"
+  @kitsu= Kitsu.new(params)
+  @pizza.save()
+  erb(:create)
 end
 
